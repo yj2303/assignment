@@ -1,0 +1,116 @@
+using System;
+ 
+class assign1{
+ 
+// Function to print the series
+static void printSeries(int N)
+{
+ int a=0,b=0,c=1;
+    if (n < 3) return 0;
+    Console.Write(a+ ", ");
+    Console.Write(b+ ", ");
+    Console.Write(c+ ", ");
+    for(int i = 1; i<= n-3; i++){
+        int d = a + b + c;
+        Console.Write(d+ ", ");
+        a = b;
+        b = c;
+        c = d;
+}
+ 
+static void Main()
+{
+    int N = 10;
+ 
+    printSeries(N);
+}
+}
+//square of n numbers
+using System;  
+public class assign
+{  
+    public static void Main()
+{
+   int i,n;
+
+   n= 10;     
+   for(i=1;i<=n;i++)
+   {
+     Console.Write("{0} ",i*i);
+    
+   }
+  } 
+}
+//third series
+using System;
+class assign
+{
+ public static void Main()
+ {
+  
+  int i = 1, j=1, n=250;
+  if(n>0)
+  {
+   while(i <= n)
+   {
+    if(j%3!=0)
+    {
+        Console.Write("{0} ",i);
+     
+     i = i+4*j;
+    } 
+     j++; 
+   }
+  }
+  
+  
+ }
+}
+//number divisible by three
+using System;
+public class assign{
+    static void result(int N)
+    {    
+        for (int num = 1; num < N; num++)
+        {    
+            if (num % 3 == 0)
+                Console.Write(num + " ");
+        }
+    }
+     
+    static public void Main (){
+        int N = 100;
+        result(N);
+    }
+}
+//check palindrome
+using System;
+namespace checkPalindrome
+{
+    public class assign
+    {
+        static void Main(string[] args)
+        {
+          
+            int number = int.Parse(Console.ReadLine());
+            int reminder, sum = 0;
+            int temp = number;
+            while (number > 0)
+            {
+                reminder = number % 10;
+                
+                sum = (sum * 10) + reminder;
+                number = number / 10; 
+            }
+            if (temp == sum)
+            {
+                Console.WriteLine($"Number {temp} is Palindrome.");
+            }
+            else
+            {
+                Console.WriteLine($"Number {temp} is not Palindrome");
+            }
+            
+        }
+    }
+}
