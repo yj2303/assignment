@@ -7,7 +7,7 @@ namespace EFCoreScaffolding
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args, Employee employee)
         {
             var configuration = new ConfigurationBuilder()
                      .SetBasePath(Directory.GetCurrentDirectory())
@@ -34,12 +34,27 @@ namespace EFCoreScaffolding
             {
                 foreach (var x in e.Territories)
                 {
-                    Console.WriteLine(x.TerritoryDescription);
+                   Console.WriteLine(x.TerritoryDescription);
                 }
             }
+            //2
+            var maxSale = (from ep in dbContext.Employees
+                              join e in dbContext.Orders on ep.EmployeeId equals e.EmployeeId
+                              join t in dbContext.OrderDetails on e.OrderId equals t.OrderId
+                              select new
+                              {
+                                  employeename = ep.FirstName,
+                                  maximumSale = t.Quantity*t.UnitPrice
+                                  
+                              });
+            foreach (var x in maxSale)
+            
+               
+                Console.WriteLine(x.employeename + " " + x.maximumSale);
 
-           //3
-            var productName = dbContext.Invoices.Select(x => new
+            
+        //3
+        var productName = dbContext.Invoices.Select(x => new
             {
                 productname = x.ProductName,
                 shipcountry = x.ShipCountry
@@ -47,7 +62,7 @@ namespace EFCoreScaffolding
             }).ToList();
             foreach (var x in productName)
             {
-                Console.WriteLine(x.productname + " " + x.shipcountry);
+               Console.WriteLine(x.productname + " " + x.shipcountry);
 
             }
             //4
@@ -56,11 +71,11 @@ namespace EFCoreScaffolding
             {
                 productid = x.ProductId,
                 quantity = x.Quantity,
-                moneyearned = (double)(x.UnitPrice) * (1 - (x.Discount / 100.0)) * (x.Quantity)
+                moneyearned = (double)(x.UnitPrice) * (1 - (x.Discount )) * (x.Quantity)
 
             }).ToList();
             foreach (var x in details)            {
-                Console.WriteLine(x.productid + " " + x.quantity+ " "+x.moneyearned);
+         //       Console.WriteLine(x.productid + " " + x.quantity+ " "+x.moneyearned);
 
             }
             //var employees = dbContext.Employees.Where(e => e.EmployeeId == userId);
