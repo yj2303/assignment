@@ -34,15 +34,15 @@ namespace AdoNetSample
         }
 
 
-        private static IEnumerable<Order> DataReaderToOrdersDemo()
+        private static IEnumerable<Product> DataReaderToOrdersDemo()
         {
-            var orders = new List<Order>();
+            var products = new List<Product>();
 
             using (var sqlConnection = new SqlConnection(connectionString))
             {
                 sqlConnection.Open();
 
-                var sql = "SELECT * FROM Orders";
+                var sql = "SELECT * FROM Products";
 
                 using (var sqlCommand = new SqlCommand(sql, sqlConnection))
                using (var sqlCommand = new SqlCommand(sql, sqlConnection))
@@ -90,13 +90,15 @@ namespace AdoNetSample
         
         private static void ParameterizedQueryDemo(int productId)
         {
-            var orders = new List<Order>();
+            var products = new List<Product>();
 
             using (var sqlConnection = new SqlConnection(connectionString))
             {
                 sqlConnection.Open();
 
-                var sql = "UPDATE Products SET UnitPrice = 1000 WHERE ProductID=productId;";
+                var sql = @"DECLARE @unitPrice INT = 1000;
+                DECLARE @ProductId INT = -1;
+                UPDATE Products SET UnitPrice = @unitPrice WHERE ProductID=@productId;";
 
                 using (var sqlCommand = new SqlCommand(sql, sqlConnection))
                 {
@@ -143,7 +145,7 @@ namespace AdoNetSample
             {
                 sqlConnection.Open();
 
-                var sql = @"DELETE FROM Products WHERE ProductID= productId";
+                var sql = @"DELETE FROM Products WHERE ProductID= @productId";
 
                using (var sqlCommand = new SqlCommand(sql, sqlConnection))
                 {
