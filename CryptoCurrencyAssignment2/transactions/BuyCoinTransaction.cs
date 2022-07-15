@@ -1,47 +1,28 @@
 ﻿using System;
 using System.Threading;
 
-namespace com.assignment2.transactions
+namespace CryptoCurrencyAssignment2.transactions
 {
-	using HashFun = com.assignment2.callingClasses.HashFun;
-	using Coin = com.assignment2.entities.Coin;
-	using Trader = com.assignment2.entities.Trader;
-	using CoinStatus = com.assignment2.enums.CoinStatus;
-	using TransactionStatus = com.assignment2.enums.TransactionStatus;
-	using Buy = com.assignment2.operationEntities.Buy;
+	using HashFun = CryptoCurrencyAssignment2.callingClasses.HashFun;
+	using Coin = CryptoCurrencyAssignment2.entities.Coin;
+	using Trader = CryptoCurrencyAssignment2.entities.Trader;
+	using Buy = CryptoCurrencyAssignment2.operationEntities.Buy;
 
-	/// <summary>
-	/// Having all the functionalities of buyCoin Transaction thread.
-	/// </summary>
+
 	public class BuyCoinTransaction : Transaction
 	{
 		private readonly Buy buy;
 
-		/// <param name="buy"> Require buy object to get the information of the buy Transaction. </param>
-		public BuyCoinTransaction(Buy buy)
+			public BuyCoinTransaction(Buy buy)
 		{
 			this.buy = buy;
 		}
-
-		/// <summary>
-		/// Implemented the run function for buy Transaction.
-		/// first it checks that the coin is AVAILABLE or not
-		/// i.e. is it occupied by some other thread or not.
-		/// if occupied then current thread goes to wait state.
-		/// if the coin is available then the current thread make the coin status not available so that no other thread
-		/// can access the coin will it is working
-		/// next it checks that the trader owns the coin or not if own it update the vale of the coin own buy them
-		/// else it creates a new coin object and assign the values of the buy transaction and add it in the hashmap of
-		/// coinOwnByTrader
-		/// after that it perform the buy operation
-		/// after that it notify all the other thread and then make the coin status available.
-		/// </summary>
-		public override void run()
+	public override void run()
 		{
 
 			lock (this.buy.Coin)
 			{
-				while (this.buy.Coin.Status == CoinStatus.NOT_AVAILABLE || this.buy.Coin.Volume < this.buy.Quantity)
+				while (this.buy.Coin.Status =="NOT_AVAILABLE" || this.buy.Coin.Volume < this.buy.Quantity)
 				{
 					try
 					{
@@ -53,7 +34,7 @@ namespace com.assignment2.transactions
 						Console.Write(e.StackTrace);
 					}
 				}
-				this.buy.Coin.Status = CoinStatus.NOT_AVAILABLE;
+				this.buy.Coin.Status = "NOT_AVAILABLE";
 				TransactionId = HashFun.BlockHash;
 
 				Trader currentTrader = traderMap[this.buy.WalletAddress];
@@ -77,7 +58,7 @@ namespace com.assignment2.transactions
 					coin.Volume = this.buy.Quantity;
 					coin.Price = this.buy.Coin.Price;
 					coin.Rank = this.buy.Coin.Rank;
-					coin.Status = CoinStatus.AVAILABLE;
+					coin.Status = "AVAILABLE";
 
 					currentTrader.coinOwnByTheTrader[coin.Symbol] = coin;
 					double? expense = this.buy.Quantity * this.buy.Coin.Price;
@@ -85,8 +66,8 @@ namespace com.assignment2.transactions
 				}
 				this.buy.Coin.Volume = buy.Coin.Volume - buy.Quantity;
 				Monitor.PulseAll(this.buy.Coin);
-				this.buy.Coin.Status = CoinStatus.AVAILABLE;
-				this.buy.Status = TransactionStatus.COMPLETED;
+				this.buy.Coin.Status = "AVAILABLE";
+				this.buy.Status = "COMPLETED";
 			}
 
 		}
