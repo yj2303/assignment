@@ -34,7 +34,7 @@ namespace EFCoreScaffolding
             {
                 foreach (var x in e.Territories)
                 {
-                   Console.WriteLine(x.TerritoryDescription);
+             //      Console.WriteLine(x.TerritoryDescription);
                 }
             }
             //2
@@ -62,7 +62,7 @@ namespace EFCoreScaffolding
             }).ToList();
             foreach (var x in productName)
             {
-               Console.WriteLine(x.productname + " " + x.shipcountry);
+               //Console.WriteLine(x.productname + " " + x.shipcountry);
 
             }
             //4

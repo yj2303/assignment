@@ -1,0 +1,15 @@
+C:\Users\Admin\Source\Repos\assignments\Assignment_IPL\bin\Debug\net6.0\IPL_DESIGN.exe
+C:\Users\Admin\Source\Repos\assignments\Assignment_IPL\bin\Debug\net6.0\IPL_DESIGN.deps.json
+C:\Users\Admin\Source\Repos\assignments\Assignment_IPL\bin\Debug\net6.0\IPL_DESIGN.runtimeconfig.json
+C:\Users\Admin\Source\Repos\assignments\Assignment_IPL\bin\Debug\net6.0\IPL_DESIGN.dll
+C:\Users\Admin\Source\Repos\assignments\Assignment_IPL\bin\Debug\net6.0\IPL_DESIGN.pdb
+C:\Users\Admin\Source\Repos\assignments\Assignment_IPL\obj\Debug\net6.0\IPL_DESIGN.csproj.AssemblyReference.cache
+C:\Users\Admin\Source\Repos\assignments\Assignment_IPL\obj\Debug\net6.0\IPL_DESIGN.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Source\Repos\assignments\Assignment_IPL\obj\Debug\net6.0\IPL_DESIGN.AssemblyInfoInputs.cache
+C:\Users\Admin\Source\Repos\assignments\Assignment_IPL\obj\Debug\net6.0\IPL_DESIGN.AssemblyInfo.cs
+C:\Users\Admin\Source\Repos\assignments\Assignment_IPL\obj\Debug\net6.0\IPL_DESIGN.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Source\Repos\assignments\Assignment_IPL\obj\Debug\net6.0\IPL_DESIGN.dll
+C:\Users\Admin\Source\Repos\assignments\Assignment_IPL\obj\Debug\net6.0\refint\IPL_DESIGN.dll
+C:\Users\Admin\Source\Repos\assignments\Assignment_IPL\obj\Debug\net6.0\IPL_DESIGN.pdb
+C:\Users\Admin\Source\Repos\assignments\Assignment_IPL\obj\Debug\net6.0\IPL_DESIGN.genruntimeconfig.cache
+C:\Users\Admin\Source\Repos\assignments\Assignment_IPL\obj\Debug\net6.0\ref\IPL_DESIGN.dll
