@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Source\\Repos\\assignments\\Assignment_IPL\\IPL_DESIGN.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\assignment\\assignments\\assignment1\\IPL_DESIGN\\IPL_DESIGN.csproj",
       "projectName": "IPL_DESIGN",
-      "projectPath": "C:\\Users\\Admin\\Source\\Repos\\assignments\\Assignment_IPL\\IPL_DESIGN.csproj",
+      "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\assignment\\assignments\\assignment1\\IPL_DESIGN\\IPL_DESIGN.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Source\\Repos\\assignments\\Assignment_IPL\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\assignment\\assignments\\assignment1\\IPL_DESIGN\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

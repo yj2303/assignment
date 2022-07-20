@@ -7,8 +7,8 @@ namespace IPL_DESIGN
     {
         static void Main(string[] args)
         {
-
-            var data = LoadData.GetCSVData(@"C:\Users\Admin\Source\Repos\assignments\Assignment_IPL\IPL_2021_data.csv");
+            //
+            var data = LoadData.GetCSVData(@"C:\Users\Admin\Documents\GitHub\assignment\assignments\assignment1\IPL_DESIGN\IPL_2021_data.csv");
 
 
             var teams = TeamServices.GetTeams(data);
