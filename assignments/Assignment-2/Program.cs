@@ -14,6 +14,7 @@ namespace Assignment_2
     {
         static List<Coin> coins;
         // private static Stream jsonArray;
+        static List<Transaction> jsonlist;
         static List<Trader> traders;
         static List<traderData> tradersdata;
 
@@ -34,7 +35,9 @@ namespace Assignment_2
                             .ToList();
 
 
-
+            string fileName = @"C:\Users\Admin\source\repos\KDU-Dotnet-Backend\Assignment-2\Files\test_transaction.json";
+            string jsonString = File.ReadAllText(fileName);
+            jsonlist = JsonSerializer.Deserialize<List<Transaction>>(jsonString);
 
 
 
@@ -42,10 +45,13 @@ namespace Assignment_2
             Console.WriteLine("2. display top 50 coins in the market based on price.");
             Console.WriteLine("3. for a given trader, show his portfolio.");
             Console.WriteLine("4. for a given trader, display the total profit or loss they have made trading in the crypto market.");
-            Console.WriteLine("show top 5 and bottom 5 traders based on their profit/loss.");
+            Console.WriteLine("5. show top 5 and bottom 5 traders based on their profit/loss.");
 
+            
             int choice = Convert.ToInt32(Console.ReadLine());
 
+            
+            
             switch (choice)
             {
 
