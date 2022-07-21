@@ -5904,11 +5904,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Source\\Repos\\KDU-Dotnet-Backend\\Assignment-2\\Assignment-2.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\assignment\\assignments\\Assignment-2\\Assignment-2.csproj",
       "projectName": "Assignment-2",
-      "projectPath": "C:\\Users\\Admin\\Source\\Repos\\KDU-Dotnet-Backend\\Assignment-2\\Assignment-2.csproj",
+      "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\assignment\\assignments\\Assignment-2\\Assignment-2.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Source\\Repos\\KDU-Dotnet-Backend\\Assignment-2\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\assignment\\assignments\\Assignment-2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -51,18 +51,21 @@ namespace Assignment_2
 
 
                 case 1:
+                    
+                    
+                    
                     string input = Console.ReadLine();
 
-                    searchcoins(input);
+                    searchcoins(input, coins);
                     break;
 
                 case 2:
-                    displaytop50();
+                    displaytop50(coins);
                     break;
 
                 case 3:
                     string tradername = Console.ReadLine();
-                    displayportfolio(tradername);
+                    displayportfolio(tradername, traders);
                     break;
 
                 case 4:
@@ -83,19 +86,20 @@ namespace Assignment_2
 
 
 
-        static void searchcoins(string coinname)
+        static void searchcoins(string coinname, List<Coin>coins)
         {
+            //     List<Coin> coins = new List<Coin>();
+            var coinslist = coins.Where(x => (x.Name == coinname) || (x.Symbol == coinname));
 
-            foreach (var coin in coins)
+            foreach (var coin in coinslist)
             {
-                if (coin.Name == coinname)
-                {
+                
                     Console.WriteLine(coin.Name + " " + coin.Symbol + " " + coin.Price + " " + coin.CirculatingSupply);
-                }
+                
             }
         }
 
-        static void displaytop50()
+        static void displaytop50(List<Coin>coins)
         {
             var top50coinslist = coins.OrderByDescending(c => c.Price).Take(50);
 
@@ -105,16 +109,15 @@ namespace Assignment_2
             }
         }
 
-        static void displayportfolio(string tradername)
+        static void displayportfolio(string tradername,List<Trader>traders)
         {
 
-
-            foreach (var trader in traders)
+            var traderslist = traders.Where(x => x.first_name == tradername);
+            foreach (var trader in traderslist)
             {
-                if (trader.first_name == tradername)
-                {
+              
                     Console.WriteLine(trader.first_name + " " + trader.last_name + " " + trader.phone + " " + trader.Wallet_Address);
-                }
+                
             }
 
             //dictionary<string, list<string>> traderportfolio = new dictionary<string, list<string>>();
