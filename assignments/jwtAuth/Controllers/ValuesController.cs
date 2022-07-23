@@ -9,44 +9,45 @@ namespace jwtAuth.Controllers
 {
     public class ValuesController
     {
-        [Route("api/[controller]")]
-        [ApiController]
-        public class AuthController : ControllerBase
+         [Route("api/[controller]")]
+    [ApiController]
+    public class AuthController : ControllerBase
+    {
+       
+
+        private readonly UserRepository userRepository ;
+        public AuthController(UserRepository userRepository)
         {
-
-
-            private readonly Repository userRepository;
-            public AuthController(Repository userRepository)
-            {
-                this.userRepository = userRepository;
-            }
-
-            [HttpGet]
-            public string Get(string username, string password)
-            {
-                var token = userRepository.GenerateToken(username, password);
-
-                return (string)token;
-            }
-
-            [HttpPost]
-            public bool Get(string token)
-            {
-                bool isValid = (bool)userRepository.ValidateToken(token, out var validatedToken, out var principal);
-                if (isValid)
-                {
-                    return true;
-
-                }
-                else
-                {
-                    return false;
-
-
-                }
-
-            }
+            this.userRepository= userRepository;
         }
+
+        [HttpGet]
+        public string Get(string username,string password)
+        {
+            var token = userRepository.GenerateToken(username, password);
+
+            return (string)token;
+        }
+
+        [HttpPost]
+        public bool Get(string token)
+        {
+            bool isValid = (bool)userRepository.ValidateToken(token, out var validatedToken, out var principal);
+            if (isValid)
+            {
+                return true;
+
+            }
+            else
+            {
+                return false;
+
+
+            }
+
+        }
+    }
+
     }
     }
 

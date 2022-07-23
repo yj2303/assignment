@@ -17,16 +17,9 @@ namespace Assignment_2.OperationEntities
 
         static List<Assignment_2.Models.Transaction> transactions;
 
-        public void LoadJson()
-        {
-            using (StreamReader r = new StreamReader(@"C:\Users\Admin\Source\Repos\KDU-Dotnet-Backend\Assignment-2\Files\test_transaction.json"))
-            {
-                string json = r.ReadToEnd();
-                List<Transaction> transactions = JsonConvert.DeserializeObject<List<Transaction>>(json);
-            }
-        }
+      
 
-        public List<traderData> UpdatePortfolio(int quantity, string name, string wallet_address, List<traderData> traderdata)
+        public List<Trader> UpdatePortfolio(int quantity, string name, string wallet_address, List<traderData> traderdata)
         {
             foreach (var trader in traderdata)
             {

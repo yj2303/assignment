@@ -11551,11 +11551,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\jwtAuth\\jwtAuth.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\assignment\\assignments\\jwtAuth\\jwtAuth.csproj",
       "projectName": "jwtAuth",
-      "projectPath": "C:\\Users\\Admin\\source\\repos\\jwtAuth\\jwtAuth.csproj",
+      "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\assignment\\assignments\\jwtAuth\\jwtAuth.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\source\\repos\\jwtAuth\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\assignment\\assignments\\jwtAuth\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

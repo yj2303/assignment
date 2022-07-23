@@ -44,14 +44,6 @@
               "target": "Package",
               "version": "[0.13.1, )"
             },
-            "CsvHelper": {
-              "target": "Package",
-              "version": "[28.0.1, )"
-            },
-            "Microsoft.Extensions.Configuration.Json": {
-              "target": "Package",
-              "version": "[6.0.0, )"
-            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"

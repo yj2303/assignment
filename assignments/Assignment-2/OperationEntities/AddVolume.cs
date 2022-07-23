@@ -17,22 +17,28 @@ namespace Assignment_2.OperationEntities
 
         static List<Assignment_2.Models.Transaction> transactions;
 
-        public void LoadJson()
+       /* public void LoadJson()
         {
             using (StreamReader r = new StreamReader(@"C:\Users\Admin\Source\Repos\KDU-Dotnet-Backend\Assignment-2\Files\test_transaction.json"))
             {
                 string json = r.ReadToEnd();
                 List<Transaction> transactions = JsonConvert.DeserializeObject<List<Transaction>>(json);
             }
-        }
+        }*/
 
        
-        public List<Coin> addvolume(string symbol, int quantity, List<Coin> coins)
+        public List<Coin> addvolume(string coinName, int quantity, List<Coin> coins)
         {
-
+            Hash_Function hf = new Hash_Function();
+            Thread backgroundThread  =new Thread(() =>
+            {
+                hf.GetBlockHash;
+            });
+            backgroundThread.IsBackground = true;
+            backgroundThread.Start();
             foreach (var coin in coins)
             {
-                if (coin.Symbol == symbol)
+                if (coin.Name == coinName)
                     coin.CirculatingSupply += quantity;
             }
             return coins;
