@@ -8,35 +8,27 @@ namespace Assignment_2.Models
 {
     internal class Traders
     {
-       
-        public string? first_name { get; set; }
-        public string? last_name { get; set; }
-        public string? phone { get; set; }
-        public string? Wallet_Address { get; set; }
-
-
-
-
-
-        public static Coins GetCoinsData(string csvLine)
+        public Traders()
         {
-            string[] values = csvLine.Split(',');
-            Coins coinsData = new Coins();
-
-            coinsData.Rank = Convert.ToInt32(values[1]);
-            coinsData.Name = values[2];
-            coinsData.Symbol = values[3];
-            coinsData.Price = Convert.ToDouble(values[4]);
-            coinsData.CirculatingSupply = Convert.ToInt64(values[5]);
-
-            return coinsData;
+            List<TradersCoins> tradersCoins = new List<TradersCoins>();
         }
+        public string first_name { get; set; }
+        public string last_name { get; set; }
+        public string phone { get; set; }
+        public string Wallet_Address { get; set; }
 
+        public List<TradersCoins>? tradersCoins { get; set; }
+
+
+
+
+
+     
 
         public static Traders GetTradersData(string csvLine)
         {
             string[] values = csvLine.Split(',');
-            Traders tradersData = new Traders();
+            var tradersData = new Traders();
 
             tradersData.first_name = values[1];
             tradersData.last_name = values[2];

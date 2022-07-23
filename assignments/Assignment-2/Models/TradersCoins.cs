@@ -18,10 +18,6 @@ namespace Assignment_2.Models
 
         public double SellingPrice { get; set; }
 
-        //public double Profit { get; set; }
-
-        //public double Loss { get; set; }
-
         public string WalletAddress { get; set; }
     }
 }
