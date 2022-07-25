@@ -45,7 +45,7 @@ namespace Assignment_2
             try
             {
 
-                string filename = @"C:\Users\Admin\Desktop\KDU-Dotnet-Backend\Assignment-2\Files\test_transaction.json";
+                string filename = @"C:\Users\Admin\Desktop\KDU-Dotnet-Backend\Assignment-2\Files\  t.json";
                 string jsonString = File.ReadAllText(filename);
                 transactionList = JsonSerializer.Deserialize<List<Transaction>>(jsonString);
 
